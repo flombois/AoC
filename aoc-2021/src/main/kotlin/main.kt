@@ -1,3 +1,6 @@
+import com.github.flombois.aoc.Day1Challenge
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+
+    println(Day1Challenge().computeSolution())
 }
