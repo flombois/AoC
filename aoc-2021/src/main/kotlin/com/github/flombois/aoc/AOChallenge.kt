@@ -15,6 +15,11 @@ interface AOChallenge {
     val day: Int
 
     /**
+     * Challenge part
+     */
+    val part: Int
+
+    /**
      * Challenge year, must be read-only
      */
     val year: Int
@@ -24,7 +29,7 @@ interface AOChallenge {
      * @return A the challenge description
      */
     fun getDescription(): String {
-        return getResourceContent("/descriptions/day${this.day}.txt")
+        return getResourceContent("/descriptions/${this.getInputFilename()}")
     }
 
     fun getDate(): LocalDate {
@@ -32,14 +37,20 @@ interface AOChallenge {
     }
 
     fun getInput(): String {
-        return getResourceContent("/inputs/day${this.day}.txt")
+        return getResourceContent("/inputs/${this.getInputFilename()}")
     }
 
-    fun computeSolution(): String {
-        return solution(getInput())
+    fun getInputFilename(): String {
+        return "day${this.day}part${this.part}.txt"
     }
 
-    fun solution(input: String): String
+    fun solve() {
+        println(getDescription() + "\n")
+        println("Computing solution for Day: ${this.day} Part: ${this.part} (${this.getDate()})")
+        println(computeSolution(getInput()))
+    }
+
+    fun computeSolution(input: String): String
 
     fun getResourceAsURL(path: String): URL? {
         return this::class.java.getResource(path)
