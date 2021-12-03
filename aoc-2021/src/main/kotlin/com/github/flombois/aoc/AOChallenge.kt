@@ -47,10 +47,10 @@ interface AOChallenge {
     fun solve() {
         println(getDescription() + "\n")
         println("Computing solution for Day: ${this.day} Part: ${this.part} (${this.getDate()})")
-        println(computeSolution(getInput()))
+        println(computeSolution())
     }
 
-    fun computeSolution(input: String): String
+    fun computeSolution(): String
 
     fun getResourceAsURL(path: String): URL? {
         return this::class.java.getResource(path)
