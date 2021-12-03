@@ -7,6 +7,9 @@ internal class Day1Part1ChallengeTest {
 
     @Test
     fun test() {
-        assertEquals(7, Integer.valueOf(Day1Part1Challenge().computeSolution()))
+        var challenge = Day1Part1Challenge()
+        assertEquals(1, challenge.day)
+        assertEquals(1, challenge.part)
+        assertEquals(7, Integer.valueOf(challenge.computeSolution()))
     }
 }
