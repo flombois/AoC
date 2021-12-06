@@ -1,7 +1,7 @@
-import com.github.flombois.aoc.days.Day1Part1Challenge
-import com.github.flombois.aoc.days.Day1Part2Challenge
+
+import com.github.flombois.aoc.days.Day2Part1Challenge
 
 fun main(args: Array<String>) {
 
-    Day1Part2Challenge().solve()
+    Day2Part1Challenge().solve()
 }
