@@ -1,6 +1,6 @@
-import com.github.flombois.aoc.days.Day2Part2Challenge
+import com.github.flombois.aoc.days.Day3Part1Challenge
 
 fun main() {
 
-    Day2Part2Challenge().solve()
+    Day3Part1Challenge().solve()
 }
